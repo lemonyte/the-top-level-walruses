@@ -42,7 +42,7 @@ class PietInterpreter:
         self,
         image: Image.Image,
         *,
-        step_limit: int = 1_000_000,
+        step_limit: int = 1_0000000000_000,
         debug: bool = False,
         runtime: PietRuntime | None = None,
     ):

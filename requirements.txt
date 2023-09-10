@@ -2,3 +2,5 @@
 # Don't forget to pin your dependencies!
 
 Pillow~=10.0.0
+Flask~=2.3.3
+Flask-SocketIO ~=5.3.6
