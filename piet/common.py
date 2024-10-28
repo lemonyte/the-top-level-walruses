@@ -10,12 +10,10 @@ class SelfExpandingList(list[T]):
         super().__init__(iterable)
 
     @overload
-    def __getitem__(self, index: int, /) -> T:
-        ...
+    def __getitem__(self, index: int, /) -> T: ...
 
     @overload
-    def __getitem__(self, index: slice, /) -> "SelfExpandingList[T]":
-        ...
+    def __getitem__(self, index: slice, /) -> "SelfExpandingList[T]": ...
 
     def __getitem__(self, index: int | slice, /) -> T | "SelfExpandingList[T]":
         try:
@@ -39,12 +37,10 @@ class SelfExpandingList(list[T]):
             return self.__getitem__(index)
 
     @overload
-    def __setitem__(self, index: int, value: T, /):
-        ...
+    def __setitem__(self, index: int, value: T, /): ...
 
     @overload
-    def __setitem__(self, index: slice, value: T | Iterable[T], /):
-        ...
+    def __setitem__(self, index: slice, value: T | Iterable[T], /): ...
 
     def __setitem__(self, index, value, /):
         try:
